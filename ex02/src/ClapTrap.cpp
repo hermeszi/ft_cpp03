@@ -87,7 +87,7 @@ void ClapTrap::takeDamage(unsigned int amount)
 {
 	if (_hitPoint < 1)
 	{
-		cout << "ClapTrap " << _name << " cannot take any more damage." << std::endl;
+		std::cout << "ClapTrap " << _name << " cannot take any more damage." << endl;
 		return ;
 	}
 	if (_hitPoint <= amount)
@@ -102,7 +102,7 @@ void ClapTrap::beRepaired(unsigned int amount)
 {
 	if (_energyPoint < 1 || _hitPoint < 1)
 	{
-		cout << "ClapTrap " << _name << " cannot repair itself." << std::endl;
+		std::cout << "ClapTrap " << _name << " cannot repair itself." << endl;
 		return ;
 	}
 	_hitPoint += amount;

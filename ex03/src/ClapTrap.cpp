@@ -19,13 +19,13 @@ using std::cout;
 ClapTrap::ClapTrap() :
 _name("Default"), _hitPoint(10), _energyPoint(10), _attack(0)
 {
-	cout << "ClapTrap default constructor called" << endl;
+	cout << "ClapTrap default constructor called" << std::endl;
 }
 
 ClapTrap::ClapTrap(string name) :
 _name(name), _hitPoint(10), _energyPoint(10), _attack(0)
 {
-	cout << "ClapTrap constructor called for " << _name << endl;
+	cout << "ClapTrap constructor called for " << _name << std::endl;
 }
 
 ClapTrap::ClapTrap	(const ClapTrap& copy)
@@ -49,10 +49,10 @@ ClapTrap& ClapTrap::operator= (const ClapTrap& other)
 
 ClapTrap::~ClapTrap()
 {
-	cout << "ClapTrap destructor called for " << _name << endl;
+	cout << "ClapTrap destructor called for " << _name << std::endl;
 }
 
-string	ClapTrap::getName() const
+const string&	ClapTrap::getName() const
 {
 	return (this->_name);	
 }
@@ -76,7 +76,7 @@ void ClapTrap::attack(const string& target)
 {
 	if (_energyPoint < 1 || _hitPoint < 1)
 	{
-		std::cout << "ClapTrap " << _name << " cannot attack." << endl;
+		std::cout << "ClapTrap " << _name << " cannot attack." << std::endl;
 		return ;
 	}
 	cout << "ClapTrap " << _name << " attacks " << target << " causing " << _attack << " points of damage!" << endl;
@@ -87,7 +87,7 @@ void ClapTrap::takeDamage(unsigned int amount)
 {
 	if (_hitPoint < 1)
 	{
-		cout << "ClapTrap " << _name << " cannot take any more damage." << std::endl;
+		std::cout << "ClapTrap " << _name << " cannot take any more damage." << std::endl;
 		return ;
 	}
 	if (_hitPoint <= amount)
@@ -102,7 +102,7 @@ void ClapTrap::beRepaired(unsigned int amount)
 {
 	if (_energyPoint < 1 || _hitPoint < 1)
 	{
-		cout << "ClapTrap " << _name << " cannot repair itself." << std::endl;
+		std::cout << "ClapTrap " << _name << " cannot repair itself." << std::endl;
 		return ;
 	}
 	_hitPoint += amount;
