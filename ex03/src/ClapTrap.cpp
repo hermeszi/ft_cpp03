@@ -6,7 +6,7 @@
 /*   By: myuen <myuen@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/11 16:53:29 by myuen             #+#    #+#             */
-/*   Updated: 2025/07/17 17:31:24 by myuen            ###   ########.fr       */
+/*   Updated: 2025/07/30 16:23:54 by myuen            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ void ClapTrap::attack(const string& target)
 {
 	if (_energyPoint < 1 || _hitPoint < 1)
 	{
-		std::cout << "ClapTrap " << _name << " cannot attack." << std::endl;
+		cout << "ClapTrap " << _name << " cannot attack." << std::endl;
 		return ;
 	}
 	cout << "ClapTrap " << _name << " attacks " << target << " causing " << _attack << " points of damage!" << endl;
@@ -87,7 +87,7 @@ void ClapTrap::takeDamage(unsigned int amount)
 {
 	if (_hitPoint < 1)
 	{
-		std::cout << "ClapTrap " << _name << " cannot take any more damage." << std::endl;
+		cout << "ClapTrap " << _name << " cannot take any more damage." << std::endl;
 		return ;
 	}
 	if (_hitPoint <= amount)
@@ -102,7 +102,7 @@ void ClapTrap::beRepaired(unsigned int amount)
 {
 	if (_energyPoint < 1 || _hitPoint < 1)
 	{
-		std::cout << "ClapTrap " << _name << " cannot repair itself." << std::endl;
+		cout << "ClapTrap " << _name << " cannot repair itself." << endl;
 		return ;
 	}
 	_hitPoint += amount;
