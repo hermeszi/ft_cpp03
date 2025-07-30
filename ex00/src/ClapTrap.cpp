@@ -6,7 +6,7 @@
 /*   By: myuen <myuen@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/11 16:53:29 by myuen             #+#    #+#             */
-/*   Updated: 2025/07/17 17:31:24 by myuen            ###   ########.fr       */
+/*   Updated: 2025/07/30 16:05:05 by myuen            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,3 +110,4 @@ void ClapTrap::beRepaired(unsigned int amount)
 	cout << _name << " hit points is now: " << _hitPoint << endl;
 	_energyPoint -= 1;
 }
+
