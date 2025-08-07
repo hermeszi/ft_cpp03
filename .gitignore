@@ -1,0 +1,20 @@
+# Build artifacts
+ex00/00
+ex01/01
+ex02/02
+ex03/03
+
+# Object files and dependencies
+*/obj/
+*.o
+*.d
+
+# Editor files
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
