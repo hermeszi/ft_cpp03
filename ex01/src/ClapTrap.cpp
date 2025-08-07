@@ -52,7 +52,7 @@ ClapTrap::~ClapTrap()
 	cout << "ClapTrap destructor called for " << _name << endl;
 }
 
-string	ClapTrap::getName() const
+const string&	ClapTrap::getName() const
 {
 	return (this->_name);	
 }

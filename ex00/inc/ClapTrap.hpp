@@ -18,7 +18,7 @@ using std::string;
 
 class ClapTrap
 {
-private:
+protected:
 	string			_name;
 	unsigned int	_hitPoint;
 	unsigned int	_energyPoint;
@@ -31,7 +31,7 @@ public:
 	ClapTrap	(const ClapTrap& copy);
 	ClapTrap&	operator= (const ClapTrap& other);
 
-	string	getName() const;
+	const string&	getName() const;
 	unsigned int	getHitPoint() const;
 	unsigned int	getEnergyPoint() const;
 	unsigned int	getAttack() const;
